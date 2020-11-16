@@ -1,0 +1,27 @@
+#server:
+#  port: 8060
+sharing:
+  datasource0:
+    dataBaseName: db0
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.30.128:3306/cloud
+    userName: root
+    passWord: 123456
+
+spring:
+#  datasource:
+#    #mybatis数据库配置
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    type: com.alibaba.druid.pool.DruidDataSource
+#    url: jdbc:mysql://192.168.30.128:3306/cloud?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+#    username: root
+#    password: 123456
+  freemarker:
+    cache: false
+    template-loader-path: classpath:/templates/
+  pulsar:
+    instance-servers: pulsar://192.168.55.130:30002
+  servlet:
+    multipart:
+      max-file-size: 500MB  #单个文件大小
+      max-request-size: 1GB #上传的数据大小
